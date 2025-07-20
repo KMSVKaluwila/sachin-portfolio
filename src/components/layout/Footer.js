@@ -29,29 +29,28 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-surface border-t border-surface-light/20 py-2 sm:py-3 mt-4 sm:mt-6"
+      className="bg-surface border-t border-surface-light/20 py-6 mt-12"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={footerVariants}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Copyright */}
         <motion.div 
-          className="flex flex-col sm:flex-row sm:justify-between items-center text-text-muted text-xs"
+          className="flex flex-col sm:flex-row justify-between items-center text-text-muted text-sm gap-4"
           variants={itemVariants}
         >
-          <div className="flex items-center mb-1 sm:mb-0">
-            <Link to="/" className="text-sm sm:text-base font-heading font-bold gradient-text inline-block mr-1">
+          <div className="flex items-center">
+            <Link to="/" className="text-lg font-heading font-bold gradient-text inline-block mr-2">
               SK
             </Link>
-            <span className="text-sm sm:text-base font-heading">Sachin Kaluwila</span>
+            <span className="text-lg font-heading">Sachin Kaluwila</span>
           </div>
           <div className="text-center sm:text-right">
-            <p className="text-xs">© {new Date().getFullYear()} Sachin Kaluwila. All rights reserved.</p>
+            <p className="text-xs sm:text-sm">© {new Date().getFullYear()} Sachin Kaluwila. All rights reserved.</p>
             <motion.p 
-              className="mt-0.5 text-xs opacity-75"
+              className="text-xs sm:text-sm mt-1"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
