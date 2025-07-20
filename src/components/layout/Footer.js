@@ -29,7 +29,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-surface border-t border-surface-light/20 py-12 mt-20"
+      className="bg-surface border-t border-surface-light/20 py-2 sm:py-3 mt-4 sm:mt-6"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -39,19 +39,19 @@ const Footer = () => {
 
         {/* Copyright */}
         <motion.div 
-          className="flex justify-between items-center text-text-muted text-sm"
+          className="flex flex-col sm:flex-row sm:justify-between items-center text-text-muted text-xs"
           variants={itemVariants}
         >
-          <div className="flex items-center">
-            <Link to="/" className="text-lg font-heading font-bold gradient-text inline-block mr-2">
+          <div className="flex items-center mb-1 sm:mb-0">
+            <Link to="/" className="text-sm sm:text-base font-heading font-bold gradient-text inline-block mr-1">
               SK
             </Link>
-            <span className="text-lg font-heading">Sachin Kaluwila</span>
+            <span className="text-sm sm:text-base font-heading">Sachin Kaluwila</span>
           </div>
-          <div>
-            <p>© {new Date().getFullYear()} Sachin Kaluwila. All rights reserved.</p>
+          <div className="text-center sm:text-right">
+            <p className="text-xs">© {new Date().getFullYear()} Sachin Kaluwila. All rights reserved.</p>
             <motion.p 
-              className="text-right mt-1"
+              className="mt-0.5 text-xs opacity-75"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
